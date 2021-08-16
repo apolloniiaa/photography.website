@@ -6,15 +6,15 @@
 
 @font-face {
   font-family: 'Ruhl';
-  src: url('./fonts/FrankRuhlLibre-Regular.ttf');
+  src: url('./fonts/FrankRuhlLibre-Regular.ttf') format('woff2');
 }
 @font-face {
   font-family: 'Ruhl Medium';
-  src: url('./fonts/MADE\ Bon\ Voyage\ Thin\ PERSONAL\ USE.otf');
+  src: url('./fonts/MADE\ Bon\ Voyage\ Thin\ PERSONAL\ USE.otf') format('woff2');
 }
 @font-face {
   font-family: 'Vibes';
-  src: url('./fonts/GreatVibes-Regular.ttf');
+  src: url('./fonts/GreatVibes-Regular.ttf') format('woff2');
 }
 
 html {
@@ -41,11 +41,11 @@ input,
 a,
 p {
   font-size: var(--text);
-  font-family: Ruhl Medium, sans-serif;
+  font-family: 'Ruhl Medium', sans-serif;
 }
 h2 {
   font-size: var(--header2);
-  font-family: Ruhl Medium, sans-serif;
+  font-family: 'Ruhl Medium', sans-serif;
 }
 h3 {
   font-size: var(--header3);
@@ -73,7 +73,7 @@ body {
   animation: opening 1s ease-in-out forwards;
 }
 h1 {
-  font-family: 'Vibes', sans-serif;
+  font-family: Vibes, sans-serif;
 }
 .main-head {
   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
