@@ -5,16 +5,16 @@
 }
 
 @font-face {
-  font-family: "Ruhl";
-  src: url("/fonts/FrankRuhlLibre-Regular.ttf");
+  font-family: 'Ruhl';
+  src: url('/fonts/FrankRuhlLibre-Regular.ttf');
 }
 @font-face {
-  font-family: "Ruhl Medium";
-  src: url("/fonts/FrankRuhlLibre-Medium.ttf");
+  font-family: 'Ruhl Medium';
+  src: url('/fonts/MADE\ Bon\ Voyage\ Thin\ PERSONAL\ USE.otf');
 }
 @font-face {
-  font-family: "Vibes";
-  src: url("/fonts/GreatVibes-Regular.ttf");
+  font-family: 'Vibes';
+  src: url('/fonts/GreatVibes-Regular.ttf');
 }
 
 html {
@@ -25,7 +25,7 @@ html {
   --header4: calc(2.4rem + 1vw);
   --text: calc(1.5rem + 1vw);
   --big: calc(6rem + 1vw);
-  --special-color: #906272;
+  --special-color: rgba(135, 162, 60, 0.359);
   --background-color: #414141;
   --gray-text: #525252;
   scroll-behavior: smooth;
@@ -41,9 +41,11 @@ input,
 a,
 p {
   font-size: var(--text);
+  font-family: 'Ruhl Medium', sans-serif;
 }
 h2 {
   font-size: var(--header2);
+  font-family: 'Ruhl Medium', sans-serif;
 }
 h3 {
   font-size: var(--header3);
@@ -58,7 +60,7 @@ ul {
 }
 a {
   text-decoration: none;
-  color: black;
+  color: rgba(0, 0, 0, 0.811);
 }
 .flex {
   display: flex;
@@ -67,13 +69,12 @@ a {
   align-items: center;
 }
 body {
-  font-family: "Ruhl", sans-serif;
+  font-family: 'Ruhl', sans-serif;
   animation: opening 1s ease-in-out forwards;
 }
 h1 {
-  font-family: "Vibes", sans-serif;
+  font-family: 'Vibes', sans-serif;
 }
-
 .main-head {
   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
   z-index: 2;
@@ -96,6 +97,9 @@ nav {
   justify-content: space-around;
   flex: 1 1 20rem;
 }
+.nav-links a:hover {
+  border-bottom: 2px solid var(--special-color);
+}
 .hero {
   min-height: 90vh;
   width: 95%;
@@ -117,11 +121,28 @@ nav {
   padding-top: 3rem;
 }
 .hero-introduction a {
-  padding: 2rem 8rem;
-  border: 3px solid black;
+  padding: 1rem 5rem;
+  border-radius: 9px;
+  background-color: rgba(135, 162, 60, 0.236);
   margin-bottom: 4rem;
+  text-transform: uppercase;
 }
-
+.hero-introduction a:hover {
+  color: white;
+  background-image: linear-gradient(
+    90deg,
+    #0d280025 0%,
+    #143c001e 49%,
+    rgba(6, 152, 62, 0.14) 80%,
+    #36d7001c 100%
+  );
+  animation: slidebg 5s linear infinite;
+}
+@keyframes slidebg {
+  to {
+    background-position: 20vw;
+  }
+}
 .hero-images {
   flex: 1 1 40rem;
   background: linear-gradient(#dad8dd, #dad1d4);
@@ -196,10 +217,10 @@ nav {
 }
 .about-text h3 {
   padding: 2rem 0rem;
-  font-family: "Ruhl Medium";
+  font-family: 'Ruhl Medium';
 }
 .about-text h2 {
-  font-family: "Vibes";
+  font-family: 'Vibes';
   padding: 4rem;
 }
 .about-image {
@@ -243,11 +264,15 @@ nav {
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  background: var(--background-color);
-  padding: 5rem 10rem;
+  background: rgb(65, 65, 65, 0.4);
+  padding: 4rem 8rem;
+  letter-spacing: 1px;
   text-align: center;
 }
-
+.quality-text {
+  font-family: 'Ruhl Medium';
+  padding: 1rem;
+}
 .contact {
   min-height: 90vh;
   display: flex;
@@ -281,6 +306,16 @@ nav {
   border: none;
   width: 100%;
 }
+.submit-btn:hover {
+  background-image: linear-gradient(
+    90deg,
+    #0d280025 0%,
+    #143c001e 49%,
+    rgba(6, 152, 62, 0.14) 80%,
+    #36d7001c 100%
+  );
+  animation: slidebg 5s linear infinite;
+}
 .contact img {
   flex: 1 1 40rem;
 }
@@ -292,6 +327,7 @@ footer {
   padding: 3rem 5%;
   align-items: center;
   flex-wrap: wrap;
+  font-family: 'Ruhl Medium';
 }
 footer ul {
   display: flex;
@@ -327,7 +363,7 @@ input:focus {
   }
   .burger span {
     padding: 0.2rem 2rem;
-    background: var(--gray-text);
+    background: var(--special-color);
     margin: 0.5rem 0rem;
     display: block;
     transition: all 0.5s ease;
@@ -335,10 +371,14 @@ input:focus {
   .nav-links a {
     color: white;
     font-size: var(--header3);
+  }
+  .nav-links a:hover {
+    font-size: var(--header2);
+    color: rgb(162, 189, 120);
     text-decoration: underline;
   }
   .nav-links {
-    background: var(--background-color);
+    background: gray;
     width: 100%;
     height: 100%;
     position: fixed;
@@ -355,7 +395,7 @@ input:focus {
 
   .toggle .line1 {
     transform: rotateZ(45deg) translateY(300%);
-    background: white;
+    background: rgb(162, 189, 120);
   }
   .toggle .line2 {
     opacity: 0;
