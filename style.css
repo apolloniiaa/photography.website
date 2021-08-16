@@ -91,6 +91,7 @@ nav {
 }
 #logo {
   flex: 1 1 20rem;
+  font-family: 'Vibes';
 }
 .nav-links {
   display: flex;
