@@ -41,11 +41,11 @@ input,
 a,
 p {
   font-size: var(--text);
-  font-family: 'Ruhl Medium', sans-serif;
+  font-family: Ruhl Medium, sans-serif;
 }
 h2 {
   font-size: var(--header2);
-  font-family: 'Ruhl Medium', sans-serif;
+  font-family: Ruhl Medium, sans-serif;
 }
 h3 {
   font-size: var(--header3);
@@ -69,7 +69,7 @@ a {
   align-items: center;
 }
 body {
-  font-family: 'Ruhl', sans-serif;
+  font-family: Ruhl, sans-serif;
   animation: opening 1s ease-in-out forwards;
 }
 h1 {
@@ -91,7 +91,7 @@ nav {
 }
 #logo {
   flex: 1 1 20rem;
-  font-family: 'Vibes';
+  font-family: Vibes, sans-serif;
 }
 .nav-links {
   display: flex;
